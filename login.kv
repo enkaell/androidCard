@@ -1,0 +1,73 @@
+<LoginScreen>:
+    BoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+            title: 'Login'
+        MDGridLayout:
+            padding: [40,90]
+            rows: 3
+            MDTextField:
+                height: 200
+                id: login
+                hint_text: "Insert username"
+            MDTextField:
+                password: True
+                id: password
+                hint_text: "Password"
+            MDFillRoundFlatButton:
+                id: btn_login
+                text: "Login"
+                weight: dp(900)
+                text_color: "white"
+                md_bg_color: "799DE4"
+                on_release: app.do_login(login.text, password.text)
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+<EventsScreen>
+    BoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+            title: 'Events'
+            left_action_items: [["menu", lambda x: app.callback(x)]]
+        ScrollView:
+            id: scroll
+            do_scroll_y: True
+            GridLayout:
+                id: box
+                size_hint_y: None
+                cols: 1
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+
+<MyEventsScreen>
+    BoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+            title: 'My events'
+            left_action_items: [["menu", lambda x: app.callback(x)]]
+        ScrollView:
+            id: scroll
+            do_scroll_y: True
+            GridLayout:
+                id: box
+                size_hint_y: None
+                cols: 1
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+
+<MyProfileScreen>
+    BoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+            title: 'My profile'
+            left_action_items: [["menu", lambda x: app.callback(x)]]
+        GridLayout:
+            id: profile
+            cols: 2
+            spacing: [80,20]
+        MDTopAppBar:
+            md_bg_color: "799DE4"
