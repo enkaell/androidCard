@@ -53,7 +53,6 @@
             do_scroll_y: True
             GridLayout:
                 id: box
-                size_hint_y: None
                 cols: 1
         MDTopAppBar:
             md_bg_color: "799DE4"
@@ -68,6 +67,32 @@
         GridLayout:
             id: profile
             cols: 2
-            spacing: [80,20]
+            spacing: [20,20]
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+
+<CreateEventScreen>
+    BoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+            title: 'Create an event'
+            left_action_items: [["menu", lambda x: app.callback(x)]]
+        BoxLayout:
+            id: createevent
+            orientation: "vertical"
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+
+<EventScreen>
+    BoxLayout:
+        orientation: 'vertical'
+        MDTopAppBar:
+            md_bg_color: "799DE4"
+            title: 'Event'
+            left_action_items: [["menu", lambda x: app.callback(x)]]
+        GridLayout:
+            id: event
+            cols: 2
         MDTopAppBar:
             md_bg_color: "799DE4"
